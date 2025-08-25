@@ -8,7 +8,7 @@ from homeassistant import config_entries, core, exceptions
 
 from homeassistant.const import CONF_HOST, CONF_NAME
 
-from pixelblaze import Pixelblaze
+from .pb_monkeypatch import Pixelblaze
 
 from .const import DOMAIN
 
@@ -22,10 +22,9 @@ def pixelblaze_connect(host: str):
     # pylint: disable=invalid-name
     try:
         pb = Pixelblaze(host)
-        dev_name = pb.getHardwareConfig()["name"]
+        dev_name = pb.getDeviceName()
         if dev_name is None:
             dev_name = host
-        pb.close()
         return dev_name
     except Exception as e:  # pylint:disable=broad-except
         _LOGGER.error(f"Unable to connect to {host}: Exception: {e}")

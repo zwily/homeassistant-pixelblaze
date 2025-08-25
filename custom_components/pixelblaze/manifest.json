@@ -2,18 +2,13 @@
   "domain": "pixelblaze",
   "name": "Pixelblaze",
   "config_flow": true,
-  "documentation": "https://github.com/vutang50/homeassistant-pixelblaze",
-  "issue_tracker": "https://github.com/vutang50/homeassistant-pixelblaze/issues",
-  "requirements": [
-    "websocket-client>=1.0.0",
-    "pixelblaze-client==0.9.4"
-  ],
+  "documentation": "https://github.com/zwily/homeassistant-pixelblaze",
+  "issue_tracker": "https://github.com/zwily/homeassistant-pixelblaze/issues",
+  "requirements": ["websocket-client>=1.0.0", "pixelblaze-client==1.1.5"],
   "ssdp": [],
   "zeroconf": [],
   "homekit": {},
   "dependencies": [],
-  "codeowners": [
-    "@vutang50"
-  ],
-  "version": "2022.6"
+  "codeowners": ["@zwily"],
+  "version": "2025.8"
 }
